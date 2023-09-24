@@ -10,5 +10,5 @@ Software dirigido a empresas para obtener un análisis de su nivel de sostenibil
 
 ``` 
 pip install matplotlib
-pip install pip install git+https://github.com/Fridaplatform/SofttekLLMSDK.git
+pip install git+https://github.com/Fridaplatform/SofttekLLMSDK.git
 ```
