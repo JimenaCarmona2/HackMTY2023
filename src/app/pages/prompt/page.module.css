@@ -2,7 +2,7 @@
 
 .container {
     max-width: 1280px;
-    max-height: 2048px;
+    max-height: 3000px;
     margin: 0 auto;
     padding: 250px;
     background-color: #f8f8f8;
@@ -120,4 +120,18 @@
   /* Estilo para los valores de la columna */
   .columnValues {
     margin-left: 10px;
+  }
+
+  /* Estilo para centrar la tabla y sus títulos */
+  .centerTable {
+    width: 100%;
+    text-align: center; /* Centra el contenido horizontalmente */
+  }
+
+  .centerTable th {
+    vertical-align: middle; /* Centra verticalmente los encabezados de la tabla */
+  }
+
+  .centerTable td {
+    vertical-align: middle; /* Centra verticalmente las celdas de la tabla */
   }

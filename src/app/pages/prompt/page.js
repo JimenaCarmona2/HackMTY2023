@@ -5,6 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import './global.css';
+import Image from 'next/image';
 
 export default function Home() {
   // Inicializa el estado para el valor del campo de entrada y el valor enviado
@@ -118,8 +119,46 @@ export default function Home() {
               <br />- The dioxins and furans levels range from 0 to 0.37, with an average of 0.0925. These values are also below the maximum limit of 0.2 mg/m³.
               </div>
             </div>
+
+            <div className={styles.columnData}>
+            <div className={styles.columnTitle}>Análisis general en gráficos</div>
+            <div className={styles.columnValues}>
+              {/* Aquí comienza la tabla */}
+              <table className={styles.centerTable}>
+                <thead>
+                  <tr>
+                    <th>Variables</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      {/* Utiliza el componente Image en lugar de <img> */}
+                      <Image src="/Figure_1.png" alt="Gráfico 1" width={300} height={200} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Image src="/Figure_2.png" alt="Gráfico 2" width={300} height={200} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Image src="/Figure_3.png" alt="Gráfico 3" width={300} height={200} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <Image src="/Figure_4.png" alt="Gráfico 4" width={300} height={200} />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              {/* Aquí termina la tabla */}
+            </div>
           </div>
-        )}
+          </div>
+          )}
 
         <label className={styles.label}>
           Escriba una instrucción:
