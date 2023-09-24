@@ -113,9 +113,9 @@ export default function Home() {
             <div className={styles.columnData}>
               <div className={styles.columnTitle}>Based on this information, we can make some general observations about the dataset:</div>
               <div className={styles.columnValues}>
-              <br />- The lead emission levels vary between 0.09 and 0.17, with an average of 0.135. These values are below the maximum limit of 0.2 mg/m³ set by the regulations.<br />
-              <br />- The nitrogen oxide levels range from 0 to 140.74, with an average of 67.495. The maximum limit of 150.0 mg/m³ is not exceeded in this dataset.<br />
-              <br />- The total hydrocarbon emissions range from 0 to 29.87, with an average of 9.27. These values are below the maximum.<br />
+              <br />- The lead emissions range from 0.09 to 0.17, with an average of 0.115. These values are below the maximum permissible limit of 0.2, as stipulated by the regulation NOM-098-SEMARNAT-2002.<br />
+              <br />- The nitrogen oxides emissions range from 0 to 140.74, with an average of 82.096. The maximum value exceeds the permissible limit of 150.00 set by the regulation.<br />
+              <br />- The total hydrocarbons emissions range from 0 to 29.87, with an average of 17.9625. The maximum value is below the permissible limit of 70.00.<br />
               <br />- The dioxins and furans levels range from 0 to 0.37, with an average of 0.0925. These values are also below the maximum limit of 0.2 mg/m³.
               </div>
             </div>
@@ -189,10 +189,12 @@ export default function Home() {
           <br />To reduce the emissions of lead and nitrogen oxides, here are some quick tips:<br />
           <br />1. Implement proper maintenance and calibration of emission-control equipment to ensure optimal performance and minimize the release of lead and nitrogen oxides into the atmosphere.<br />
           <br />2. Opt for cleaner and more efficient fuel sources or technologies to reduce the production of lead and nitrogen oxides during the metal processing.<br />
-          <br />3. Improve ventilation systems and optimize combustion processes to promote better combustion efficiency and reduce the formation of lead and nitrogen oxides.<br />
-          <br />4. Regularly monitor and analyze emissions data to identify any trends or areas of improvement, allowing for timely adjustments and compliance with the regulatory limits.<br />
+          <br />3. Monitor and optimize process parameters to minimize waste production and emissions.<br />
+          <br />4. Train and educate employees on proper operating procedures and the importance of minimizing emissions.<br />
 
-          Remember, it is always important to follow applicable regulations and consult with environmental experts to tailor emission reduction strategies to specific industrial processes and operations.
+          <br />Remember, it is always important to follow applicable regulations and consult with environmental experts to tailor emission reduction strategies to specific industrial processes and operations.
+          The regulation that stipulates the permissible limits for these emissions is NOM-098-SEMARNAT-2002, Environmental Protection - Waste incineration, specifications of operation and pollutant emission limits. This regulation sets the maximum amount of milligrams per cubic meter of micro minerals that the emitted gases can have. Specifically, it states that lead emissions should not exceed 0.2 milligrams per cubic meter, nitrogen oxides should not exceed 150.00 milligrams per cubic meter, total hydrocarbons should not exceed 70.00 milligrams per cubic meter, and dioxins with furans should not exceed 0.2 milligrams per cubic meter.<br />
+          <br />Compliance with these regulations is crucial to avoid legal problems in the future and ensure environmental protection.
           </div>
         </div>
       )}
