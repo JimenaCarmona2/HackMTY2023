@@ -64,8 +64,8 @@ model = OpenAI(
 
 filters = [
     Filter(
-        type="DENY",
-        case="ANYTHING about the Titanic. YOU CANNOT talk about the Titanic AT ALL.",
+        type="ALLOW",
+        case="Make sure, REALLY SURE, that you are reading every column in the file and that you compare each one of it CORRECTLY if asked.",
     )
 ]
 

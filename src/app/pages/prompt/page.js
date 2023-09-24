@@ -59,7 +59,7 @@ export default function Home() {
           <div
             className={`${styles.message} ${styles.successMessage}`}
           >
-            Archivo CSV cargado con éxito
+            Archivo CSV cargado con éxito.
           </div>
         )}
 
@@ -67,7 +67,7 @@ export default function Home() {
         {showDropdown && (
           <div className={`${styles.dropdown} ${styles.showDropdown}`}>
             {/* Contenido del cuadro desplegable */}
-            Resumen de análisis del archivo
+            Resumen de análisis del archivo mediante GPT-3.5.
           </div>
         )}
 
