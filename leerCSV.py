@@ -1,6 +1,5 @@
 import os
 import matplotlib.pyplot as plt
-import numpy as np
 import csv
 from softtek_llm.chatbot import Chatbot
 from softtek_llm.models import OpenAI
@@ -133,10 +132,7 @@ operation and pollutant emission limits. It is a regulation by the country of Me
 
 print(get_answer(generate_prompt_from_csv("contaminantes.csv")))
 
-plt.rcParams['font.family'] = 'Lucida Grande'
-
 # Set a custom style (you can choose from available styles or create your own)
-plt.style.use('seaborn-whitegrid')
 csfont = {'fontname':'Times New Roman'}
 
 #Función para graficar histograma de frecuencia
