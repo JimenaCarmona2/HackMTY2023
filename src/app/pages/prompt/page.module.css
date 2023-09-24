@@ -1,17 +1,14 @@
 /* page.module.css */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #ccc; /* Cambia el color de fondo del body a gris claro */
-  }
+
 .container {
-    max-width: 800px;
+    max-width: 1280px;
+    max-height: 1024px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 250px;
     background-color: #f8f8f8;
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(to right, #ccc, #f8f8f8, #ccc);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    background-image: linear-gradient(to right, #ffffff, #f8f8f8, #ccc);
   }
   
   .title {

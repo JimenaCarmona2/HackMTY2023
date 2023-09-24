@@ -6,6 +6,8 @@ import React, { useState } from 'react';
 // Importa los estilos CSS desde './page.module.css'
 import styles from './page.module.css';
 
+import './global.css'; // Asegúrate de que la ruta sea correcta
+
 export default function Home() {
   // Inicializa el estado para el valor del campo de entrada y el valor enviado
   const [inputValue, setInputValue] = useState('');
