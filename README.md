@@ -16,4 +16,4 @@ pip install git+https://github.com/Fridaplatform/SofttekLLMSDK.git
 Archivo de python "leerCSV.py": leectura del archivo CSV, cuenta con la generación de prompts, query a OpenAI, imprimir las respuestas generadas por Chat GPT-3.5, y generación de gráficas con matplotlib.
 
 ## FRONTEND 💻
-Proyecto de Next.js: cuenta con una página que contiene un espacio para subir un archivo .csv para simular ser analizado por Chat GPT-3.5 y posteriormente desplegar el análisis con números y gráficas. También una caja de texto donde se puede introducir un mensaje para hacer preguntas a la inteligencia artificial, se simula una respuesta a una pregunta que da recomendaciones y se despliega la información.
+Proyecto de Next.js: en url de navegador ingresar "http://localhost:3000/pages/prompt", cuenta con una página que contiene un espacio para subir un archivo .csv para simular ser analizado por Chat GPT-3.5 y posteriormente desplegar el análisis con números y gráficas. También una caja de texto donde se puede introducir un mensaje para hacer preguntas a la inteligencia artificial, se simula una respuesta a una pregunta que da recomendaciones y se despliega la información.
