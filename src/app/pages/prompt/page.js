@@ -10,6 +10,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState('');
   const [submittedValue, setSubmittedValue] = useState('');
   const [selectedFile, setSelectedFile] = useState(null); // Estado para el archivo seleccionado
+  const [fileUploaded, setFileUploaded] = useState(false); // Estado para controlar si se cargó un archivo
 
   // Maneja los cambios en el campo de entrada
   const handleInputChange = (event) => {
@@ -20,6 +21,7 @@ export default function Home() {
   const handleFileChange = (event) => {
     const file = event.target.files[0]; // Obtén el primer archivo seleccionado
     setSelectedFile(file);
+    setFileUploaded(true); // Indica que se cargó un archivo
   };
 
   // Maneja el envío del formulario
@@ -36,13 +38,21 @@ export default function Home() {
       <form onSubmit={handleSubmit} className={styles.form}>
         {/* Input para seleccionar un archivo */}
         <label className={styles.label}>
-          Seleccione un archivo:
+          Seleccione un archivo CSV:
           <input
             type="file"
-            accept=".csv" // Puedes especificar los tipos de archivo permitidos
+            accept=".csv" // Limita la selección a archivos CSV
             onChange={handleFileChange}
           />
         </label>
+
+        {/* Muestra un cuadro de mensaje si se cargó un archivo */}
+        {fileUploaded && (
+          <div className={styles.message}>
+            Archivo CSV cargado con éxito.
+          </div>
+        )}
+
         <label className={styles.label}>
           Escriba una instrucción:
           <input
