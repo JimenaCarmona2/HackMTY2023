@@ -1,12 +1,8 @@
 "use client"
 
-// Importa React y useState
 import React, { useState } from 'react';
-
-// Importa los estilos CSS desde './page.module.css'
 import styles from './page.module.css';
-
-import './global.css'; // Asegúrate de que la ruta sea correcta
+import './global.css';
 
 export default function Home() {
   // Inicializa el estado para el valor del campo de entrada y el valor enviado
