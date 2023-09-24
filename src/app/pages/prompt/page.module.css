@@ -25,14 +25,16 @@
     align-items: center;
   }
   
+  /* Estilo de petición */
   .label {
     color: black;
     text-align: center;
     font-size: 14px;
     margin-bottom: 10px;
-    line-height: 3;
+    line-height: 4;
   }
   
+  /* Estilo de la instrucción dada por el usuario */
   .input {
     width: 70%;
     padding: 10px;
@@ -80,19 +82,22 @@
   .successMessage {
     color: green;
     font-weight: bold;
+    line-height: 3;
   }
   
   .dropdown {
     display: none;
-    background-color: rgb(235, 235, 235);
+    background-color: #ffffff; /* Cambia el color de fondo */
     border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 200px;
     margin-top: 10px;
   }
   
   /* Estilo para el cuadro desplegable cuando se muestra */
   .showDropdown {
     display: block;
+    color: black;
+    text-align: center;
   }
   
