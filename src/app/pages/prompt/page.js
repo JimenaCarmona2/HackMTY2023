@@ -28,7 +28,7 @@ export default function Home() {
       <h1 className={styles.title}>Sustainability Level Analyzer Software</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label className={styles.label}>
-          Escriba una instrucción o pregunta:
+          Escriba una instrucción:
           <input
             type="text"
             value={inputValue}
@@ -43,7 +43,7 @@ export default function Home() {
       </form>
       {submittedValue && (
         <div className={styles.result}>
-          <h2>Texto ingresado:</h2>
+          <h2>Instrucción:</h2>
           <p>{submittedValue}</p>
         </div>
       )}

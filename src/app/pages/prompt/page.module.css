@@ -1,4 +1,9 @@
 /* page.module.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc; /* Cambia el color de fondo del body a gris claro */
+  }
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -6,6 +11,7 @@
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right, #ccc, #f8f8f8, #ccc);
   }
   
   .title {
@@ -25,13 +31,13 @@
   .label {
     color: black;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 10px;
-    line-height: 1.5;
+    line-height: 3;
   }
   
   .input {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
