@@ -1,6 +1,8 @@
+/* page.js */
 "use client"
 
-import React, { useState } from 'react';
+// Importa React y useState
+import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import './global.css';
 
@@ -30,10 +32,12 @@ export default function Home() {
     setSubmittedValue(inputValue);
   }
 
-  // Maneja el clic en el mensaje de éxito para mostrar/ocultar el cuadro desplegable
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
+  // Esta función se ejecuta cuando fileUploaded cambia a true
+  useEffect(() => {
+    if (fileUploaded) {
+      setShowDropdown(true); // Muestra automáticamente el cuadro desplegable
+    }
+  }, [fileUploaded]);
 
   return (
     // Utiliza las clases de estilo definidas en 'page.module.css'
@@ -54,7 +58,6 @@ export default function Home() {
         {fileUploaded && (
           <div
             className={`${styles.message} ${styles.successMessage}`}
-            onClick={toggleDropdown}
           >
             Archivo CSV cargado con éxito
           </div>
