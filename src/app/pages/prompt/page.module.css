@@ -2,7 +2,7 @@
 
 .container {
     max-width: 1280px;
-    max-height: 1024px;
+    max-height: 2048px;
     margin: 0 auto;
     padding: 250px;
     background-color: #f8f8f8;
@@ -30,8 +30,8 @@
     color: black;
     text-align: center;
     font-size: 14px;
-    margin-bottom: 10px;
     line-height: 4;
+    max-width: 100%;
   }
   
   /* Estilo de la instrucción dada por el usuario */
@@ -85,19 +85,39 @@
     line-height: 3;
   }
   
+  /* Añadir estos estilos al archivo page.module.css */
+
+  /* Estilo para el cuadro desplegable */
   .dropdown {
     display: none;
-    background-color: #ffffff; /* Cambia el color de fondo */
+    background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-    padding: 200px;
+    padding: 20px; /* Reduce el espacio interno */
     margin-top: 10px;
+    overflow-y: auto; /* Agrega desplazamiento vertical si el contenido es largo */
   }
-  
+
   /* Estilo para el cuadro desplegable cuando se muestra */
   .showDropdown {
     display: block;
     color: black;
-    text-align: center;
+    text-align: left; /* Alinea el texto a la izquierda */
   }
-  
+
+  /* Estilo para cada columna de datos en el cuadro desplegable */
+  .columnData {
+    margin-bottom: 20px; /* Incrementa el margen inferior */
+    margin-left: 20px;   /* Incrementa el margen izquierdo */
+    margin-right: 20px;
+  }
+
+  /* Estilo para el título de cada columna */
+  .columnTitle {
+    font-weight: bold;
+  }
+
+  /* Estilo para los valores de la columna */
+  .columnValues {
+    margin-left: 10px;
+  }
