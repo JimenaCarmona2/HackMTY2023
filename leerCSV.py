@@ -109,7 +109,23 @@ def generate_prompt_from_csv(file_path):
     for row in data[:]:  # Display the first 5 rows as an example
         prompt += ', '.join(row) + '\n'
     
-    prompt += f"Obtain the min, max, mean, and range of each column and based on that information give a general analysis of the dataset, and in a new paragraph give quick tips to reduce the emitions of lead, nitrox"
+    #prompt += f"Obtain the min and max of each column and based on that information give a general analysis of the dataset, and in a new paragraph give quick tips to reduce the emitions of lead, nitrox"
+    #return prompt
+
+    save_information = {
+        "source_file" : file_path,
+        "number_of_row": len(data),
+        "column_names": data[0],
+    }
+
+    #Seccion para aumentar información
+    prompt += f"""\nThe regulation NOM-098-SEMARNAT-2002, Environmental Protection - Waste incineration, specifications of
+operation and pollutant emission limits. It is a regulation by the country of Mexico that must be complied with for those companies that process metals. In which it is stipulated that there is a maximum amount of milligram per cubic meter of microminarals that the emitted gases can have, these being the minerals and their respective quantities: lead with 0.2, nitrogen oxides with 150.00, total hydrocarbons with 70.00 and dioxins with furans with 0.2. If these amounts are exceeded, the company is not complying with the regulations and will have legal problems in the future. The frequency of measurement of lead is 4 times a year, nitrogen oxide 3, as well as total hydrocarbons and dioxins with funranes are once.\n"""
+    for key, value in save_information.items():
+        prompt += f"- {key}: {value}\n"
+
+    
+    prompt += f"\nObtain the min, max, mean, and range of each column and based on that information give a general analysis of the dataset, and in a new paragraph give quick tips to reduce the emitions of lead, nitrox"
     return prompt
 
 
