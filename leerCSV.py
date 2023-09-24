@@ -1,4 +1,6 @@
 import os
+import matplotlib.pyplot as plt
+import numpy as np
 import csv
 from softtek_llm.chatbot import Chatbot
 from softtek_llm.models import OpenAI
@@ -130,3 +132,41 @@ operation and pollutant emission limits. It is a regulation by the country of Me
 
 
 print(get_answer(generate_prompt_from_csv("contaminantes.csv")))
+
+plt.rcParams['font.family'] = 'Lucida Grande'
+
+# Set a custom style (you can choose from available styles or create your own)
+plt.style.use('seaborn-whitegrid')
+csfont = {'fontname':'Times New Roman'}
+
+#Función para graficar histograma de frecuencia
+#input: numero de columna a analizar
+#output: grafica de hisograma
+def graficar(x):
+    data = []
+    with open('contaminantes.csv', 'r') as csv_file:
+        csv_reader = csv.reader(csv_file)
+        header = next(csv_reader)  # Read and store the header row
+        data_index = x  # Assuming you want to analyze the second column (index 1)
+        for row in csv_reader:
+            try:
+                value = float(row[data_index])
+                data.append(value)
+            except ValueError:
+                # Handle invalid or non-numeric values if needed
+                pass
+
+    # Step 4: Create a matplotlib graph
+    plt.figure(figsize=(5, 4))
+    plt.hist(data, bins=20, edgecolor='k',color='g')
+    plt.title('Histogram of Data',**csfont)
+    plt.xlabel(header[data_index],**csfont)  # Use the header name as the x-axis label
+    plt.ylabel('Frequency',**csfont)
+    # Show the graph
+
+    plt.show()
+
+graficar(0)
+graficar(1)
+graficar(2)
+graficar(3)
