@@ -77,3 +77,22 @@
     white-space: pre-wrap;
   }
   
+  .successMessage {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    display: none;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el cuadro desplegable cuando se muestra */
+  .showDropdown {
+    display: block;
+  }
+  

@@ -1,6 +1,5 @@
 "use client"
 
-// Importa React y useState
 import React, { useState } from 'react';
 import styles from './page.module.css';
 import './global.css';
@@ -10,6 +9,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState('');
   const [submittedValue, setSubmittedValue] = useState('');
   const [selectedFile, setSelectedFile] = useState(null); // Estado para el archivo seleccionado
+  const [showDropdown, setShowDropdown] = useState(false); // Estado para controlar si se muestra el cuadro desplegable
   const [fileUploaded, setFileUploaded] = useState(false); // Estado para controlar si se cargó un archivo
 
   // Maneja los cambios en el campo de entrada
@@ -28,7 +28,11 @@ export default function Home() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmittedValue(inputValue);
-    // Puedes trabajar con 'selectedFile' aquí para cargar el archivo si es necesario.
+  }
+
+  // Maneja el clic en el mensaje de éxito para mostrar/ocultar el cuadro desplegable
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
   };
 
   return (
@@ -48,8 +52,19 @@ export default function Home() {
 
         {/* Muestra un cuadro de mensaje si se cargó un archivo */}
         {fileUploaded && (
-          <div className={styles.message}>
-            Archivo CSV cargado con éxito.
+          <div
+            className={`${styles.message} ${styles.successMessage}`}
+            onClick={toggleDropdown}
+          >
+            Archivo CSV cargado con éxito
+          </div>
+        )}
+
+        {/* Cuadro desplegable */}
+        {showDropdown && (
+          <div className={`${styles.dropdown} ${styles.showDropdown}`}>
+            {/* Contenido del cuadro desplegable */}
+            Resumen de análisis del archivo
           </div>
         )}
 
